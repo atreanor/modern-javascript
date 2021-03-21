@@ -1,2 +1,2 @@
 # modern-javascript
-A collection of JavaScript projects
+A collection of JavaScript projects... 
