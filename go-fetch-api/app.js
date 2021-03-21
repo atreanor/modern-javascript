@@ -17,6 +17,12 @@ function getText() {
     .then(function(res) {
       return res.text();
     })
+    // Alternatively, you can use arrow functions to reduce code
+    //.then(res => res.text())
+    //.then(data => { console.log(data); 
+    //    document.getElementById('output').innerHTML = data;
+    //})
+    // .catch(err => console.log(err));
     // use .then again to get data from returned text
     .then(function(data){
       console.log(data);
@@ -67,7 +73,7 @@ function getExternalApi() {
     console.log(data);
     let output = '<h5>Top 30 Github Users</h5>';
     data.forEach(function(user){
-      output += `<li>${user.login}</li>`;
+      output += `<li>Username : ${user.login}</li><li>URL : ${user.url}</li>`;
     });
     document.getElementById('output').innerHTML = output;
   })
